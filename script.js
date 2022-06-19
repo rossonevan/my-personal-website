@@ -1,4 +1,47 @@
-const h2 = document.createElement("h2");
-h2.textContent = "This content added by JavaScript";
+var facts = [
+"Avocados are a fruit, not a vegetable.They\'re technically considered a single-seeded berry, believe it or not.", 
+"The Eiffel Tower can be 15 cm taller during the summer, due to thermal expansion meaning the iron heats up, the particles gain kinetic energy and take up more space.", 
+"Trypophobia is the fear of closely-packed holes. Or more specifically, \"an aversion to the sight of irregular patterns or clusters of small holes or bumps\".", 
+"Australia is wider than the moon. The moon sits at 3400km in diameter, while Australia\'s diameter from east to west is almost 4000km.", 
+"\'Mellifluous\' is a sound that is pleasingly smooth and musical to hear.", 
+"The Spice Girls were originally a band called Touch. \"When we first started [with the name Touch], we were pretty bland,\" Mel C told The Guardian in 2018. \"We felt like we had to fit into a mould.\"", 
+"Human teeth are the only part of the body that cannot heal themselves. Teeth are coated in enamel which is not a living tissue.", 
+"It\'s illegal to own just one guinea pig in Switzerland. It\'s considered animal abuse because they\'re social beings and get lonely.", 
+"The Ancient Romans used to drop a piece of toast into their wine for good health - hence why we \'raise a toast\'.",
+"The heart of a shrimp is located in its head. They also have an open circulatory system, which means they have no arteries and their organs float directly in blood.",
+"Amy Poehler was only seven years older than Rachel McAdams when she took on the role of \"cool mom\" in Mean Girls. Rachel was 25 as Regina George - Amy was 32 as her mom.",
+"People are more creative in the shower. When we take a warm shower, we experience an increased dopamine flow that makes us more creative.",
+"Baby rabbits are called kits.", 
+"The unicorn is the national animal of Scotland. It was apparently chosen because of its connection with dominance and chivalry as well as purity and innocence in Celtic mythology.",
+"The first airplane flew on December 17, 1903. Wilbur and Orville Wright made four brief flights at Kitty Hawk, North Carolina, with their first powered aircraft, aka the first airplane.",
+"Venus is the only planet to spin clockwise. It travels around the sun once every 225 Earth days but it rotates clockwise once every 243 days.",
+"Nutmeg is a hallucinogen. The spice contains myristicin, a natural compound that has mind-altering effects if ingested in large doses.",
+"A 73-year-old bottle of French Burgundy became the most expensive bottle of wine ever sold at auction in 2018, going for $558,000. The bottle of 1945 Romanee-Conti sold at Sotheby for more than 17 times its original estimate of $32,000.",
+"Competetive art used to be an Olympic sport. Between 1912 and 1948, the international sporting events awarded medals for music, painting, sculpture and architecture.",
+"A chef\'s hat has 100 pleats. Apparently, it\'s meant to represent the 100 ways you can cook an egg.",
+"In 2014, there was a Tinder match in Antarctica. 2 research scientists matched on the global dating app in the most remote part of the world - a man working at the United States Antarctic McMurdo Station and a woman camping a 45-minute helicopter ride away.",
+"The Spanish national anthem has no words. The \'Marcha Real\' is one of only four national anthems in the world (along with those of Bosnia and Herzegovina, Kosovo, and San Marino) to have no official lyrics.",
+"The Japanese word \'Kuchi zamishi\' is the act of eating when you're not hungry because your mouth is lonely.",
+"The probability of a blue lobster existing is widely touted as being one in two million. Bright blue lobsters are so-colored because of a genetic abnormality that causes them to produce more of a certain protein than others.",
+"There\'s only one letter that doesn\'t appear in any American state name. There\'s a Z in Arizona and an X in Texas, but no Q in any of them.", 
+"A book called \'A la recherche du temps perdu\' by Marcel Proust contains an estimated 9,609,000 characters, making it the longest book in the world. The title translates to \"Remembrance of Things Past\".", 
+"Google images was created after Jennifer Lopez wore that infamous dress at the 2000 Grammys. So many people were searching for her outfit, the search engine added an imagine function.", 
+"Walt Disney currently holds the most Academy Awards. Disney won 26 Oscars over the course of his career and was nominated a grand total of 59 times.", 
+"Queen Elizabeth II is a trained mechanic.When she was 16, the Queen joined the British employment agency at the Labour Exchange and learned the basics of truck repair.", 
+"Pigeons can tell the difference between Picasso and Monet. A 1995 study shows that the birds can differentiate between the two artists.", 
+"The real name for a hashtag is an octothorpe. The \'octo\' refers to the eight points in the symbol, but according to the Merriam-Webster dictionary the \'thorpe\' part is a mystery.", 
+"The actors who voiced Mickey and Minnie mouse got married in real life. Russi Taylor (Minnie) and Wayne Allwine (Mickey) got married in 1991.", 
+"You can hear a blue whale\'s heartbeat from over 2 miles away. Blue whales weigh an average of between 130,000 and 150,000kg, with their hearts weighing roughly 180kg.", 
+"The last letter added to the English alphabet was \'J\'. The letter dates back to 1524, and before that the letter \'i\' was used for both the \'i\' and \'j\' sounds.",
+"There is actually a word for someone giving an opinion on something they know nothing about. An \'ultracrepidarian\' is someone who voices thoughts beyond their expertise.",
+"Ketchup was once sold as medicine. The condiment was prescribed and sold to people suffering with indigestion back in 1834.", 
+"There\'s a fruit that tastes like chocolate pudding. A fruit native to Central and South America called black sapote that tastes like chocolate and sweet custard.", 
+"M&Ms are named after the businessmen who created them. Forrest Mars and Bruce Murrie, who apparently didn\'t have the best relationship as Mars leveraged Murrie out of his 20% share of the business before it became the biggest-selling sweet in the US.", 
+"The first person convicted of speeding was going 8 mph.", 
+"The world wastes about 1 billion metric tons of food each year."
+];
 
-document.querySelector("body").appendChild(h2);
+function randomFact() {
+    var randomNumber = Math.floor(Math.random() * (facts.length));
+    document.getElementById('factDisplay').innerHTML = facts[randomNumber];
+}

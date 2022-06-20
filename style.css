@@ -6,7 +6,9 @@ body {
 }
 
 div#top-half {
-   
+   border-style: solid;
+   border-radius: 25px;
+   background-color: yellow;
 }
 
 input[type=button] {
